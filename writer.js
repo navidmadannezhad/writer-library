@@ -16,17 +16,20 @@ class TypeWriter{
         this.makeElementEmpty();
         this.setElementProperties();
 
-            if(this.state == 'onPageLoad'){
-                document.load = this.writeWord();
+        if(this.state == 'onPageLoad'){
+            document.load = this.writeWord();
 
-            }else if(this.state == 'onPageScroll'){
-                window.addEventListener('scroll', () => {
-                    if(window.scrollY + window.innerHeight >= this.element.offsetTop + this.element.offsetHeight && !this.writterCompleted){
-                        this.writeWord();
-                        this.writterCompleted = true;
-                    }
-                })
-            }
+        }else if(this.state == 'onPageScroll'){
+            window.addEventListener('scroll', () => {
+                if(window.scrollY + window.innerHeight >= this.element.offsetTop + this.element.offsetHeight && !this.writterCompleted){
+                    this.writeWord();
+                    this.writterCompleted = true;
+                }
+            })
+        }
+
+        this.setBlinkingCursor();
+
     }
  
     setElementProperties(){
@@ -37,10 +40,9 @@ class TypeWriter{
         this.element.innerText = null;
     }
 
-    // setBlinkingCursor(){
-    //     console.log(this.blinkingCursor());
-    //     this.str = this.str + this.blinkingCursor();
-    // }
+    setBlinkingCursor(){
+        this.element.appendChild(this.blinkingCursor());
+    }
 
     blinkingCursor(){
         let cursorElement = document.createElement('span');
@@ -53,15 +55,14 @@ class TypeWriter{
     // outerHTML of the new element must be placed inside the innerHTML of the render text
 
     writeWord(){
+        let textHolder = document.createElement('span');
+        this.element.appendChild(textHolder);
         let strLength = this.str.length;
         for(let i = 0; i < strLength; i++){
             setTimeout(()=>{
-                this.element.innerHTML = this.element.innerHTML + this.str.charAt(i);
+                textHolder.innerHTML = textHolder.innerHTML + this.str.charAt(i);
             }, this.speed*i);
         }
-        setTimeout(() => {
-            this.element.appendChild(this.blinkingCursor());
-        }, strLength*this.speed);
     }
 
    
