@@ -51,13 +51,11 @@ class TypeWriter{
         return cursorElement;
     }
 
-    //use the dom parser, console the created element to see how it is diplayed in console and how to add class and content to it
-    // outerHTML of the new element must be placed inside the innerHTML of the render text
-
     writeWord(){
         let textHolder = document.createElement('span');
         this.element.appendChild(textHolder);
         let strLength = this.str.length;
+
         for(let i = 0; i < strLength; i++){
             setTimeout(()=>{
                 textHolder.innerHTML = textHolder.innerHTML + this.str.charAt(i);
