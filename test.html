@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="writer.css">
+</head>
+<body>
+
+	<h1>Hello everyone! I am navid from Iran!</h1> -->
+
+
+	<script src="writer.js"></script>
+	<script>
+		let el = document.querySelector('h1');
+		let typeWritter = new TypeWriter({
+			element: el,
+			speed: 100,
+			direction: 'ltr',
+			state: 'onPageLoad'
+		});
+
+		typeWritter.init();
+	</script>
+</body>
+</html>
