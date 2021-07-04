@@ -1,14 +1,14 @@
 /* به نام خداوند جان و خرد. کزین اندیشه برتر نگذرد */
 
 class TypeWriter{
-    constructor({element, str, speed, state, direction}){
+    constructor({element, speed, state, direction}){
         this.element = element;
-        this.str = str;
+        this.str = element.innerText;
         this.speed = speed;
         this.state = state;
         this.direction = direction;
 
-        this.strCompleted = false;
+        this.writterCompleted = false;
         //this.cursor = '|';
     }
 
@@ -21,9 +21,9 @@ class TypeWriter{
 
             }else if(this.state == 'onPageScroll'){
                 window.addEventListener('scroll', () => {
-                    if(window.scrollY + window.innerHeight > this.element.offsetTop + this.element.offsetHeight && !this.strCompleted){
+                    if(window.scrollY + window.innerHeight >= this.element.offsetTop + this.element.offsetHeight && !this.writterCompleted){
                         this.writeWord();
-                        this.writerCompleted = true;
+                        this.writterCompleted = true;
                     }
                 })
             }
