@@ -4,10 +4,9 @@ Writer library, or type writer, is a simple javascript library that can be used 
 
 # How to use
 
-Imagine that you have a ``` ```html p ``` tag, and a few texts inside of it.
+Imagine that you have a ```html p ``` tag, and a few texts inside of it.
 You can use the library like the above:
 
-```
 ```javascript
 
 // selecting the element
