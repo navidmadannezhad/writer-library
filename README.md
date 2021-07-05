@@ -13,7 +13,7 @@ You can use the library like the below:
 let el = document.querySelector('p');
 
 // creating a type writer instance
-let typeWritter = new TypeWriter({
+let typeWriter = new TypeWriter({
 	element: el,
 	speed: 100,
 	direction: 'rtl',
@@ -21,7 +21,7 @@ let typeWritter = new TypeWriter({
 });
 
 // starting the type writer
-typeWritter.init();
+typeWriter.init();
 
 ```
 
