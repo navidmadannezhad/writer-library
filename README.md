@@ -31,6 +31,6 @@ typeWritter.init();
 
 **speed**: The speed of every letter being written in ms.
 
-**direction**: The direction of the text. Options: 'ltr' and 'rtl'.
+**direction**: The direction of the text. Options: ```ltr``` and ```rtl```.
 
-**state**: The time when the type writer starts typing. Options: 'onPageLoad' and 'onPageScroll'
+**state**: The time when the type writer starts typing. Options: ```onPageLoad``` and ```onPageScroll```
