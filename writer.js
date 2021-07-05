@@ -42,13 +42,20 @@ class TypeWriter{
 
     setBlinkingCursor(){
         this.element.appendChild(this.blinkingCursor());
+        setInterval(() => {
+            this.blinkTheCursor();
+        }, 500);
     }
 
     blinkingCursor(){
         let cursorElement = document.createElement('span');
-        cursorElement.classList.add('blinking-cursor');
         cursorElement.innerHTML = '|';
         return cursorElement;
+    }
+
+    blinkTheCursor(){
+        let cursorOpacity = this.element.children[1].style.opacity;
+        cursorOpacity == 0 ? this.element.children[1].style.opacity = 1 : this.element.children[1].style.opacity = 0;
     }
 
     writeWord(){
