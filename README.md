@@ -4,7 +4,7 @@ Writer library, or type writer, is a simple javascript library that can be used 
 
 # How to use
 
-Imagine that you have a ```html p ``` tag, and a few texts inside of it.
+Imagine that you have a ``` p ``` tag, and a few texts inside of it.
 You can use the library like the above:
 
 ```javascript
@@ -14,11 +14,11 @@ let el = document.querySelector('p');
 
 // creating a type writer instance
 let typeWritter = new TypeWriter({
-			element: el,
-			speed: 100,
-			direction: 'rtl',
-			state: 'onPageLoad'
-		});
+	element: el,
+	speed: 100,
+	direction: 'rtl',
+	state: 'onPageLoad'
+});
 
 // starting the type writer
 typeWritter.init();
