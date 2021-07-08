@@ -1,6 +1,6 @@
 /* به نام خداوند جان و خرد. کزین اندیشه برتر نگذرد */
 
-export class TypeWriter{
+export default class TypeWriter{
     constructor({element, speed, state, direction}){
         this.element = element;
         this.str = element.innerHTML;
