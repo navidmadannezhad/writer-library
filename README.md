@@ -3,7 +3,9 @@
 Writer library, or type writer, is a simple javascript library that can be used to give texts a simple type writing effect.
 
 # Installation
-``` npm i @navidmnzh/writer-library ```
+``` 
+npm i @navidmnzh/writer-library 
+```
 and in your main js file:
 ```javascript
 import TypeWriter from './node_modules/@navidmnzh/writer-library/writer.js';
