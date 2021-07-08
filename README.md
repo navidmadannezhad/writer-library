@@ -2,8 +2,14 @@
 
 Writer library, or type writer, is a simple javascript library that can be used to give texts a simple type writing effect.
 
-# How to use
+# Installation
+``` npm i @navidmnzh/writer-library ```
+and in your main js file:
+```javascript
+import TypeWriter from './node_modules/@navidmnzh/writer-library/writer.js';
+```
 
+# How to use
 Imagine that you have a ``` p ``` tag, and a few texts inside of it.
 You can use the library like the below:
 
